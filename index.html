@@ -14,6 +14,7 @@
     </style> -->
     
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap" rel="stylesheet">
+    <link href="./assets/css/main.css" rel="stylesheet">
 <style>
  body,h1,h2,h3,h4,h5,h6 {
     font-family: 'Raleway', sans-serif;
@@ -98,14 +99,12 @@ body, html {
         margin:auto;
     }
 }
+@media only screen and (max-width: 600px) {
+  #readMore {
+    display: none;
+  }
+}
 
-
-
-@media (min-width: 800px) and (max-width: 850px) {
-            .navbar:not(.top-nav-collapse) {
-                background: #1C2331!important;
-            }
-    }
 
 .service {
     margin-top:20px;
@@ -158,6 +157,28 @@ body, html {
     width:100%;
 }
 
+/* head */
+.h1-cover {
+    overflow:hidden;
+    width: 100%;
+    height:100vh;
+    position: relative;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar-transparent {
+    background-color:transparent!important;
+}
+
+.navbar-color {
+    background-color:#000 !important ;
+}
+
+.header-text {
+    position:absolute;
+}
 
 
 </style>
@@ -191,33 +212,47 @@ body, html {
 
 
 <!-- Navbar bootstrap -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style="position:fixed; top:0;" >
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link disabled" href="#">Disabled</a>
-      </div>
+<nav id="mainNav" class="navbar fixed-top navbar-expand-lg navbar-dark" style="position:fixed; top:0; width:100%; color:white!important;" >
+    <div class="container">
+        <a class="navbar-brand" href="#" style="color:white!important;">&#60;&#47;&#62;Developer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color:#fff!important; z-index:1;">
+            <span class="navbar-toggler-icon" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav" style="margin-left:auto;">
+            <a class="nav-item nav-link active" href="#">HOME <i class="fa fa-angle-down"></i><span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">ABOUT US <i class="fa fa-angle-down"></i></a>
+            <a class="nav-item nav-link" href="#">NEWS <i class="fa fa-angle-down"></i></a>
+            <a class="nav-item nav-link" href="#">CONTACT US <i class="fa fa-angle-down"></i></a>
+        </div>
+        </div>
     </div>
 </nav>
 
+<section>
+<!-- section for banner slide -->
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container" id="home" style="margin-top:0px;">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-xlarge w3-wide text-white"> DEVELOPMENT</span>
-    <p class="w3-center text-white">We are web developer</p>
-    <div style="display:flex;">
-        <button class="w3-button w3-border w3-border-white text-white w3-round btn-readmore" style="margin-right:10px; margin-left:auto;">READ MORE</button>
-        <button class="w3-button w3-border w3-border-white text-black w3-round w3-white btn-learnmore" style=" margin:auto;">LEARN MORE</button>
+    <div class="h1-cover">
+        <div class="container-fluid" style="position:absolute; z-index:999; top:40%; margin-left:auto;margin-right:auto; color:#fff;">
+            <H2 style="letter-spacing: 10px;">DEVELOPMENT</H2>
+            <span>We are web development</span>
+            <div style="margin-top:10px;">
+                <button type="button" class="btn btn-outline-light btn-lg" style="margin:10px;" id="readMore">Read More</button>
+                <button type="button" class="btn btn-light btn-lg" style="margin:10px;">Learn More</button>
+            </div>
+        </div>
+        <div id="slideshow" class="bx-slide desktop">
+            <img class="item bg2x" src="./assets/img/bg/bg1.jpg" style="height: auto; opacity:1; filter:brightness(50%)" />
+            <img class="item bg2x" src="./assets/img/bg/bg2.jpg" style="height: auto; opacity:1; filter:brightness(50%)" />
+            <img class="item bg2x" src="./assets/img/bg/bg3.jpg" style="height: auto; opacity:1; filter:brightness(50%)" />
+        </div>
+        <div id="slideMobile" class="bx-slide mobile">
+            <img class="item active" src="./assets/img/bg/bg1.jpg" style="margin-left:auto; margin-right:auto; width:auto; opacity:1; filter:brightness(50%)" />
+            <img class="item" src="./assets/img/bg/bg2.jpg" style="margin-left:auto; margin-right:auto; width:auto;  opacity:1; filter:brightness(50%)" />
+            <img class="item" src="./assets/img/bg/bg3.jpg" style="margin-left:auto; margin-right:auto; width:auto; opacity:1; filter:brightness(50%)" />
+        </div>
     </div>
-  </div>
-</div>
+</section>
 
 <!-- Services section-->
 <div class="container">
@@ -302,59 +337,69 @@ body, html {
 </div>
 
 
-<div class="w3-row w3-center"></div>
-    <!--  Startttt  -->
-    <div class="row" style="margin-top:50px; margin-bottom:20px;">
-        <div class="sub-header"><H4 class="headtext">GREAT WORK</H4><H4 class="headtext" style="font-weight: 700; color:#f1b500;">.</H4></div>
-    </div>
-    <div class="row" style="margin-top:50px; margin-bottom:20px;">
-        <div class="sub-header">
-            <button type="button" class="w3-button" style="color:#f1b500;" onclick="clickall();" id="btn_click_all">ALL</button>
-            <button type="button" class="w3-button" onclick="clickbanding();" id="btn_click_banding">BRANDING</button>
-            <button type="button" class="w3-button" onclick="clickdesign();" id="btn_click_design">DESIGN</button>
-            <button type="button" class="w3-button" onclick="clickphoto();" id="btn_click_photo">PHOTO</button>
-            <button type="button" class="w3-button" onclick="clickcoffee();" id="btn_click_coffee">COFFEE</button>
-        </div>
-    </div>
-
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col col-12 col-lg-3 img-banding">
-            <img src="assets/img/b12.png" class="img-fluid img-topic" id="b1">
-        </div>
-        <div class="col col-12 col-lg-3 img-banding">
-            <img src="assets/img/b2.png" class="img-fluid img-topic" id="b2">
-        </div>
-        <div class="col col-12 col-lg-3 img-banding">
-            <img src="assets/img/d1.svg" class="img-fluid img-topic" id="d1">
-        </div>
-        <div class="col col-12 col-lg-3 img-banding">
-            <img src="assets/img/d2.jpeg" class="img-fluid img-topic" id="d2">
-        </div>
-    </div>
-
-
-    <div class="row" style="">
-        <div class="col col-12 col-lg-3 img-banding">
-            <img src="assets/img/p1.jpg" class="img-fluid img-topic" id="p1">
-        </div>
-        <div class="col col-12 col-lg-3 img-banding">
-            <img src="assets/img/p2.jpg" class="img-fluid img-topic" id="p2">
-        </div>
-        <div class="col col-12 col-lg-3 img-banding">
-            <img src="assets/img/c12.jpg" class="img-fluid img-topic" id="c1">
-        </div>
-        <div class="col col-12 col-lg-3 img-banding">
-            <img src="assets/img/c2.png" class="img-fluid img-topic" id="c2">
-        </div>
-    </div>
-</div>
 
 
 <!-- Footer -->
 <footer class="w3-center w3-white w3-padding-64">
   <p style="color:#919191">© 2020 <a href="index.html" class="w3-hover-text-primary text-dark"><b><i class="fa fa-code"></i> Developer</b></a>. All rights reserved.</p>
 </footer>
+
+
+<!-- script for slide show -->
+<script type="text/javascript">
+    function slideSwitch() {
+        var $active = $('#slideshow .item.active');
+    
+        if ( $active.length == 0 ) $active = $('#slideshow .item:last');
+    
+        /* use this to pull the images in the order they appear in the markup */
+        var $next =  $active.next().length ? $active.next()
+            : $('#slideshow .item:first');
+    
+    
+        $active.addClass('last-active');
+    
+        $next.css({opacity: 0.0})
+            .addClass('active')
+            .animate({opacity: 1.0}, 1000, function() {
+                $active.removeClass('active last-active');
+            });
+    }
+    function slideMobile() {
+        var $active = $('#slideMobile .item.active');
+    
+        if ( $active.length == 0 ) $active = $('#slideMobile .item:last');
+    
+        /* use this to pull the images in the order they appear in the markup */
+        var $next =  $active.next().length ? $active.next() : $('#slideMobile .item:first');
+    
+    
+        $active.addClass('last-active');
+    
+        $next.css({opacity: 0.0})
+            .addClass('active')
+            .animate({opacity: 1.0}, 1000, function() {
+                $active.removeClass('active last-active');
+            });
+    }
+    
+    
+    $(document).ready(function() {
+        $(function(){
+            var winW = $(window).width();
+            if (winW > 991)  {
+                $(function() {
+                    setInterval( "slideSwitch()", 5000 );
+                });
+            }
+            else{
+                $(function() {
+                    setInterval( "slideMobile()", 5000 );
+                });
+            }
+        });
+    });
+</script>
 
 <script>
 
@@ -469,25 +514,25 @@ function clickall() {
 // Navbar 
 
     // Change style of navbar on scroll
-    window.onscroll = function() {myFunction()};
-    function myFunction() {
-        var navbar = document.getElementById("myNavbar");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-dark-grey";
-        } else {
-            navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-dark-grey", "");
+    window.onscroll = function() {changeBg()};
+    function changeBg() {
+        var scroll = $(window).scrollTop();
+        if(scroll > 300){  
+            $('#mainNav').addClass('navbar-color').removeClass('navbar-transparent');
+        } else{
+            $('#mainNav').addClass('navbar-transparent').removeClass('navbar-color'); 
         }
     }
     
     // Used to toggle the menu on small screens when clicking on the menu button
-    function toggleFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
-    }
+    // function toggleFunction() {
+    //     var x = document.getElementById("navDemo");
+    //     if (x.className.indexOf("w3-show") == -1) {
+    //         x.className += " w3-show";
+    //     } else {
+    //         x.className = x.className.replace(" w3-show", "");
+    //     }
+    // }
 
 
 
