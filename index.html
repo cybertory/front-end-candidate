@@ -80,6 +80,7 @@ body, html {
     background-attachment: scroll;
     min-height: 400px;
   }
+  
 }
 
 @media only screen and (max-device-width: 800px) {
@@ -102,6 +103,16 @@ body, html {
 @media only screen and (max-width: 600px) {
   #readMore {
     display: none;
+  }
+  .works-col {
+    overflow: hidden;
+    height:auto !important;
+    width:100vw !important;
+    padding:0;
+  }
+
+  .nav-link {
+      font-size:12px !important;
   }
 }
 
@@ -180,6 +191,24 @@ body, html {
     position:absolute;
 }
 
+.works-item{
+    width:100%;
+    height:100%;
+}
+
+.works-col {
+    padding:0;
+    overflow:hidden;
+}
+
+.nav-link.active {
+    color:#f1b500;
+}
+
+.nav-link:hover{
+    color:#000;
+}
+
 
 </style>
 <body>
@@ -214,12 +243,12 @@ body, html {
 <!-- Navbar bootstrap -->
 <nav id="mainNav" class="navbar fixed-top navbar-expand-lg navbar-dark" style="position:fixed; top:0; width:100%; color:white!important;" >
     <div class="container">
-        <a class="navbar-brand" href="#" style="color:white!important;">&#60;&#47;&#62;Developer</a>
+        <a class="navbar-brand" href="#" style="color:white!important; font-size:28px;">&#60;&#47;&#62; Developer</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color:#fff!important; z-index:1;">
             <span class="navbar-toggler-icon" ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav" style="margin-left:auto;">
+        <div class="navbar-nav" style="margin-left:auto; font-size:14px;">
             <a class="nav-item nav-link active" href="#">HOME <i class="fa fa-angle-down"></i><span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">ABOUT US <i class="fa fa-angle-down"></i></a>
             <a class="nav-item nav-link" href="#">NEWS <i class="fa fa-angle-down"></i></a>
@@ -336,6 +365,59 @@ body, html {
   </div>
 </div>
 
+<!-- works -->
+<div class="container-fluid">
+    <div class="row" style="margin-top:90px; margin-bottom:20px;">
+        <div class="sub-header"><H4 class="headtext">GRATE WORK</H4><H4 class="headtext" style="font-weight: 700; color:#f1b500;">.</H4></div>
+    </div>
+    <div class="row justify-content-center" style="margin-top:20px; margin-bottom:20px;">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="###" onclick="clickall();" id="btn_click_all">ALL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="###" onclick="clickbanding();" id="btn_click_banding">BRANDING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="###" onclick="clickdesign();" id="btn_click_design">DESIGN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="###" onclick="clickphoto();" id="btn_click_photo">PHOTO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="###" onclick="clickcoffee();" id="btn_click_coffee">COFFEE</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row justify-content-center">
+       
+        <div class="col col-12 col-sm-12 col-md-3 col-lg-3 works-col" id="b1">
+            <img class="works-item" src="./assets/img/work1.jpg"/>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-3 col-lg-3 works-col" id="b2">
+            <img class="works-item" src="./assets/img/work2.jpg"/>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-3 col-lg-3 works-col" id="d1">
+            <img class="works-item" src="./assets/img/work3.jpg"/>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-3 col-lg-3 works-col" id="d2">
+            <img class="works-item" src="./assets/img/work4.jpg"/>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-3 col-lg-3 works-col" id="p1">
+            <img class="works-item" src="./assets/img/work5.jpg"/>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-3 col-lg-3 works-col" id="p2">
+            <img class="works-item" src="./assets/img/work6.jpg"/>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-3 col-lg-3 works-col" id="c1">
+            <img class="works-item" src="./assets/img/work7.jpg"/>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-3 col-lg-3 works-col" id="c2">
+            <img class="works-item" src="./assets/img/work8.jpg"/>
+        </div>
+        
+    </div>
+</div>
 
 
 
@@ -405,7 +487,6 @@ body, html {
 
 
 // Button Functions
-
 
 function clickbanding() {
 
