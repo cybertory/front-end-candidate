@@ -45,9 +45,9 @@
             </div>
         </div>
         <div id="slideshow" class="bx-slide desktop">
-            <img class="item bg2x" src="./assets/img/bg/bg1.jpg" style="height: auto; opacity:1; filter:brightness(50%)" />
-            <img class="item bg2x" src="./assets/img/bg/bg2.jpg" style="height: auto; opacity:1; filter:brightness(50%)" />
-            <img class="item bg2x" src="./assets/img/bg/bg3.jpg" style="height: auto; opacity:1; filter:brightness(50%)" />
+            <img class="item bg2x" src="./assets/img/bg/bg1.jpg" style="height:auto; opacity:1; filter:brightness(50%)" />
+            <img class="item bg2x" src="./assets/img/bg/bg2.jpg" style="height:auto; opacity:1; filter:brightness(50%)" />
+            <img class="item bg2x" src="./assets/img/bg/bg3.jpg" style="height:auto; opacity:1; filter:brightness(50%)" />
         </div>
         <div id="slideMobile" class="bx-slide mobile">
             <img class="item active" src="./assets/img/bg/bg1.jpg" style="width:auto; opacity:1; filter:brightness(50%)" />
@@ -208,32 +208,32 @@
 <script type="text/javascript">
 
 // Run Event on jQuery
-    $(document).ready(function() {
-        $(function(){
-            var winW = $(window).width();
-            if (winW > 991)  {
-                $(function() {
-                    setInterval( "slideSwitch()", 5000 );
-                });
-            }
-            else{
-                $(function() {
-                    setInterval( "slideMobile()", 5000 );
-                });
-            }
-        });
-    });
+//     $(document).ready(function() {
+//         $(function(){
+//             var winW = $(window).width();
+//             if (winW > 991)  {
+//                 $(function() {
+//                     setInterval( "slideSwitch()", 5000 );
+//                 });
+//             }
+//             else{
+//                 $(function() {
+//                     setInterval( "slideMobile()", 5000 );
+//                 });
+//             }
+//         });
+//     });
 
-// Change style of navbar on scroll
-    window.onscroll = function() {changeBg()};
-    function changeBg() {
-        var scroll = $(window).scrollTop();
-        if(scroll > 300){  
-            $('#mainNav').addClass('navbar-color').removeClass('navbar-transparent');
-        } else{
-            $('#mainNav').addClass('navbar-transparent').removeClass('navbar-color'); 
-        }
-    }
+// // Change style of navbar on scroll
+//     window.onscroll = function() {changeBg()};
+//     function changeBg() {
+//         var scroll = $(window).scrollTop();
+//         if(scroll > 300){  
+//             $('#mainNav').addClass('navbar-color').removeClass('navbar-transparent');
+//         } else{
+//             $('#mainNav').addClass('navbar-transparent').removeClass('navbar-color'); 
+//         }
+//     }
 
 </script>
 </body>

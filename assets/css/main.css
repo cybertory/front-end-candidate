@@ -225,12 +225,24 @@ a.underline-link img {
     transform: scale(1.06);
   }
 }
-@media screen and ( max-width:1240px ) {
+@media screen and ( max-width:1240px ) {  
     .sound { right: 50px;}
 
     .m-service .bx-content p{ padding: 0 10px;}
 }
-@media screen and ( max-width:991px ) {
+@media screen and ( max-width:1800px ) {  /*before desktop*/
+    .desktop>.item {
+        width: auto;
+        height:100%!important;
+    }
+}
+
+@media screen and ( max-width:991px ) {   /*mobile*/
+
+    .item.mobile {
+        width: fit-content;
+    }
+
     .grid-row {
         padding-top: 80px;
     }
